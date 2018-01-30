@@ -1,0 +1,106 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable"
+                controller="PlatformEventButtonsCtrl"
+                access="global">
+	
+    <aura:attribute name="eventName" type="String" default="SampleEvent__e"/>
+    
+    <aura:attribute name="action1_OK" type="String" default=" "/>
+    <aura:attribute name="action2_OK" type="String" default=" "/>
+    <aura:attribute name="action3_OK" type="String" default=" "/>
+    <aura:attribute name="action4_OK" type="String" default=" "/>
+    <aura:attribute name="action5_OK" type="String" default=" "/>
+   	<aura:attribute name="action6_OK" type="String" default=" "/>
+    <aura:attribute name="action7_OK" type="String" default=" "/>
+    <aura:attribute name="action8_OK" type="String" default=" "/>
+    
+    <aura:attribute name="action1_label" type="String"/>
+    <aura:attribute name="action2_label" type="String"/>
+    <aura:attribute name="action3_label" type="String"/>
+    <aura:attribute name="action4_label" type="String"/>
+    <aura:attribute name="action5_label" type="String"/>
+   	<aura:attribute name="action6_label" type="String"/>
+    <aura:attribute name="action7_label" type="String"/>
+    <aura:attribute name="action8_label" type="String"/>
+
+    <aura:attribute name="action1_event" type="String"/>
+    <aura:attribute name="action2_event" type="String"/>
+    <aura:attribute name="action3_event" type="String"/>
+    <aura:attribute name="action4_event" type="String"/>
+    <aura:attribute name="action5_event" type="String"/>
+   	<aura:attribute name="action6_event" type="String"/>
+    <aura:attribute name="action7_event" type="String"/>
+    <aura:attribute name="action8_event" type="String"/>
+    
+ 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>     
+
+    <lightning:card >
+   	    <aura:set attribute="title">
+            <div class="cntr">
+                Platform Event Sender
+            </div>
+        </aura:set>
+        
+        <div aura:id="msg"/>
+        
+        <div class="cntr">
+            <aura:if isTrue="{! !empty(v.action1_label) }">
+                <lightning:button variant="neutral" label="{! v.action1_label}" onclick="{! c.sendEvent }" aura:id="action1"/>
+                <aura:if isTrue="{! equals(v.action1_OK, 'true') }">OK</aura:if>
+                <aura:if isTrue="{! equals(v.action1_OK, 'false') }">Not OK</aura:if>
+                <br /> <br />
+            </aura:if>
+            
+            <aura:if isTrue="{! !empty(v.action2_label) }">
+                <lightning:button variant="neutral" label="{! v.action2_label}" onclick="{! c.sendEvent }" aura:id="action2"/>
+                <aura:if isTrue="{! equals(v.action2_OK, 'true') }">OK</aura:if>
+                <aura:if isTrue="{! equals(v.action2_OK, 'false') }">Not OK</aura:if>
+                <br /> <br />
+            </aura:if>       
+
+            <aura:if isTrue="{! !empty(v.action3_label) }">
+                <lightning:button variant="neutral" label="{! v.action3_label}" onclick="{! c.sendEvent }" aura:id="action3"/>
+                <aura:if isTrue="{! equals(v.action3_OK, 'true') }">OK</aura:if>
+                <aura:if isTrue="{! equals(v.action3_OK, 'false') }">Not OK</aura:if>
+                <br /> <br />
+            </aura:if>
+            
+            <aura:if isTrue="{! !empty(v.action4_label) }">
+                <lightning:button variant="neutral" label="{! v.action4_label}" onclick="{! c.sendEvent }" aura:id="action4"/>
+                <aura:if isTrue="{! equals(v.action4_OK, 'true') }">OK</aura:if>
+                <aura:if isTrue="{! equals(v.action4_OK, 'false') }">Not OK</aura:if>
+                <br /> <br />
+            </aura:if>
+            
+            <aura:if isTrue="{! !empty(v.action5_label) }">
+                <lightning:button variant="neutral" label="{! v.action5_label}" onclick="{! c.sendEvent }" aura:id="action5"/>
+                <aura:if isTrue="{! equals(v.action5_OK, 'true') }">OK</aura:if>
+                <aura:if isTrue="{! equals(v.action5_OK, 'false') }">Not OK</aura:if>
+                <br /> <br />
+            </aura:if>
+            
+            <aura:if isTrue="{! !empty(v.action6_label) }">
+                <lightning:button variant="neutral" label="{! v.action6_label}" onclick="{! c.sendEvent }" aura:id="action6"/>
+                <aura:if isTrue="{! equals(v.action6_OK, 'true') }">OK</aura:if>
+                <aura:if isTrue="{! equals(v.action6_OK, 'false') }">Not OK</aura:if>
+                <br /> <br />
+            </aura:if>
+            
+            <aura:if isTrue="{! !empty(v.action7_label) }">
+                <lightning:button variant="neutral" label="{! v.action7_label}" onclick="{! c.sendEvent }" aura:id="action7"/>
+                <aura:if isTrue="{! equals(v.action7_OK, 'true') }">OK</aura:if>
+                <aura:if isTrue="{! equals(v.action7_OK, 'false') }">Not OK</aura:if>
+                <br /> <br />
+            </aura:if>
+            
+            <aura:if isTrue="{! !empty(v.action8_label) }">
+                <lightning:button variant="neutral" label="{! v.action8_label}" onclick="{! c.sendEvent }" aura:id="action8"/>
+                <aura:if isTrue="{! equals(v.action8_OK, 'true') }">OK</aura:if>
+                <aura:if isTrue="{! equals(v.action8_OK, 'false') }">Not OK</aura:if>
+                <br /> <br />
+            </aura:if>
+            
+            <lightning:button type="reset" label="Reset Status &amp; Errors" onclick="{! c.resetStatus }" />
+        </div>
+    </lightning:card>
+    
+</aura:component>

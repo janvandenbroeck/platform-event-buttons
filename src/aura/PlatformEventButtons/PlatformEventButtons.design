@@ -1,0 +1,20 @@
+<design:component label="Platform Events - IoT Buttons">
+    <design:attribute name="eventName" label="Platform Event API Name" required="true" default="SampleEvent__e" description="Make sure this is filled in, use the API name of an existing Platform Event"/>
+    <design:attribute name="action1_label" label="Action 1 Label" description="Leave blank to disable/hide this action" placeholder="ActionButton 1"/>
+    <design:attribute name="action1_event" label="Action 1 Event JSON" description="Use valid JSON, including open and closing brackets { }" placeholder='{"DeviceId__c":"123Cat"}'/>
+    <design:attribute name="action2_label" label="Action 2 Label" description="Leave blank to disable/hide this action"/>
+    <design:attribute name="action2_event" label="Action 2 Event JSON" description="Use valid JSON, including open and closing brackets { }"/>
+    <design:attribute name="action3_label" label="Action 3 Label" description="Leave blank to disable/hide this action"/>
+    <design:attribute name="action3_event" label="Action 3 Event JSON" description="Use valid JSON, including open and closing brackets { }"/>
+    <design:attribute name="action4_label" label="Action 4 Label" description="Leave blank to disable/hide this action"/>
+    <design:attribute name="action4_event" label="Action 4 Event JSON" description="Use valid JSON, including open and closing brackets { }"/>
+    <design:attribute name="action5_label" label="Action 5 Label" description="Leave blank to disable/hide this action"/>
+    <design:attribute name="action5_event" label="Action 5 Event JSON" description="Use valid JSON, including open and closing brackets { }"/>
+    <design:attribute name="action6_label" label="Action 6 Label" description="Leave blank to disable/hide this action"/>
+    <design:attribute name="action6_event" label="Action 6 Event JSON" description="Use valid JSON, including open and closing brackets { }"/>
+    <design:attribute name="action7_label" label="Action 7 Label" description="Leave blank to disable/hide this action"/>
+    <design:attribute name="action7_event" label="Action 7 Event JSON" description="Use valid JSON, including open and closing brackets { }"/>
+    <design:attribute name="action8_label" label="Action 8 Label" description="Leave blank to disable/hide this action"/>
+    <design:attribute name="action8_event" label="Action 8 Event JSON" description="Use valid JSON, including open and closing brackets { }"/>
+    
+</design:component>

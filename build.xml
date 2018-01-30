@@ -1,0 +1,31 @@
+<project name="Generic Salesforce Deploy File" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="~/programs/ant-salesforce.jar" />
+        </classpath>
+    </taskdef>
+
+    <target name="retrieveCDO">
+        <sf:retrieve
+          username="${sfdcenv.username}"
+          password="${sfdcenv.password}"
+          serverurl="${sfdcenv.serverurl}"
+          retrieveTarget="src/"
+          unpackaged="package.xml">
+        </sf:retrieve>
+    </target>
+
+    <!-- Shared -->
+    <target name="deployCDO">
+        <sf:deploy
+            username="${sfdcenv.username}"
+            password="${sfdcenv.password}"
+            serverurl="${sfdcenv.serverurl}"
+            maxPoll="200"
+            deployRoot="src"
+            rollbackOnError="true"/>
+    </target>
+</project>
